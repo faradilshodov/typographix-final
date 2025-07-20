@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;900&display=swap");
+.overlay, .video-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -15,6 +23,47 @@ body {
 * {
   margin: 0;
   padding: 0;
+}
+
+/* Home Section ------------------------------- */
+.video-container {
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.video-container video {
+  object-fit: cover;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+.overlay h1 {
+  position: relative;
+  color: rgb(150, 150, 150);
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-weight: 600;
+  z-index: 10;
+  animation: colorChange 1.5s ease-in-out infinite alternate;
+}
+@keyframes colorChange {
+  from {
+    color: #636363;
+  }
+  to {
+    color: white;
+  }
+}
+.overlay p {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 200;
 }
 
 /* width */
