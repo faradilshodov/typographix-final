@@ -1,4 +1,12 @@
 // Extends for common styles
+%section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: $background;
+    color: $primary-font-color;
+}
+
 %full-screen-fixed {
     position: fixed;
     top: 0;

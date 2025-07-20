@@ -1,0 +1,38 @@
+/* About Section ----------------------------- */
+#about {
+    @extend %section;
+    height: 100vh;
+
+    .about-container {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        width: 100%;
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        p {
+            width: 75ch;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+            line-height: 1.8;
+        }
+
+        .phrase {
+            color: darken($primary-font-color, 20%);
+            transition-property: color;
+            transition-timing-function: ease;
+
+            @for $i from 1 through 8 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.1s;
+                }
+            }
+
+            &.active {
+                color: lighten($primary-font-color, 20%);
+            }
+        }
+    }
+}
