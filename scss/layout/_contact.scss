@@ -1,0 +1,46 @@
+/* Blog Section ----------------------------- */
+#contact {
+    @extend %section;
+    display: grid;
+    place-items: center;
+
+    .contact-container {
+        opacity: 1;
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .form-container {
+            background: $background-alt;
+            padding: 20px;
+            width: 80vw;
+            margin: 0 auto;
+            border-radius: 20px;
+            font-size: 1rem;
+
+            form {
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+
+                    .form-group {
+                        display: flex;
+                        flex-direction: column;
+
+                        label {
+                            color: white;
+                            margin-bottom: 5px;
+                        }
+
+                        input {
+                            @extend %contact-input;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
