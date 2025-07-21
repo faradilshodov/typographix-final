@@ -14,3 +14,10 @@
     height: 100%;
     width: 100%;
 }
+
+// Mixins for common styles
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
