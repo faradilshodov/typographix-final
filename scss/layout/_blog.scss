@@ -1,0 +1,129 @@
+/* Blog Section ----------------------------- */
+#blog {
+    @extend %section;
+    @include flex-center;
+    padding-top: 10vh;
+
+    .blog-container {
+        width: 80%;
+        padding: 50px;
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            transition: color 0.3s;
+
+            &:hover {
+                color: darken($primary-color, 20%);
+            }
+        }
+    }
+}
+
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.article img,
+.featured-article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Featured Article Styles */
+.featured-article {
+    margin-bottom: 50px;
+
+    h1 {
+        font-size: 2.5rem;
+        color: var(--secondary-font-color);
+        margin: 15px 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: var(--primary-font-color);
+        margin-bottom: 20px;
+    }
+}
+
+/* Smaller Articles Styles */
+.smaller-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.article {
+    @extend %article;
+
+    h2 {
+        font-size: 1.8rem;
+        color: var(--secondary-font-color);
+        margin: 15px 0;
+    }
+
+    p {
+        font-size: 1rem;
+        color: var(--primary-font-color);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
+/* Media Queries ------------------ */
+
+/* Tablet */
+@media screen and (max-width: 1025px) {
+    .main {
+        width: 90%;
+    }
+
+    .featured-article h1 {
+        font-size: 2.2rem;
+    }
+
+    .article {
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 1.7rem;
+        }
+    }
+
+    .smaller-articles {
+        flex-direction: column;
+    }
+}
+
+/* Smartphone Vertical */
+@media screen and (max-width: 600px) {
+    .featured-article {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .article {
+        margin: 10px 0;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+}
