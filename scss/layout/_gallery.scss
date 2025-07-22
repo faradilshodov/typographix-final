@@ -4,7 +4,6 @@
 
     .gallery-container {
         @include flex-center;
-        flex-direction: row;
         height: 100vh;
         position: relative;
         top: 50px;

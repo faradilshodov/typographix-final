@@ -167,9 +167,9 @@ body {
 /* Gallery Section ----------------------------- */
 #gallery .gallery-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   height: 100vh;
   position: relative;
   top: 50px;
@@ -243,6 +243,7 @@ body {
 /* Blog Section ----------------------------- */
 #blog {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-top: 10vh;
@@ -357,6 +358,31 @@ body {
 #contact .contact-container .form-container form button:hover {
   background: rgb(56.5, 56.5, 56.5);
   color: rgb(200, 200, 200);
+}
+
+/* Footer Section ----------------------------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(18, 18, 18);
+  color: rgb(200, 200, 200);
+  padding: 20px 0;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 9;
+}
+footer .social-icons {
+  margin-top: 10px;
+}
+footer .social-icons a {
+  margin: 0 10px;
+  color: rgb(200, 200, 200);
+  font-size: 1.5rem;
+}
+footer .social-icons a:hover {
+  color: #fbfbfb;
 }
 
 /* Toast Message ----------------------------- */
