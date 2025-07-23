@@ -65,7 +65,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        opacity: 1;
+        opacity: 0;
         z-index: 2;
         
         .strip {
@@ -74,7 +74,7 @@
             bottom: 0;
             width: 20%;
             background: lighten($background, 10%);
-            transform: translateY(0);
+            transform: translateY(-100%);
             transition: transform 0.5s ease;
             z-index: 1;
 
@@ -103,11 +103,19 @@
             position: relative;
             top: 15%;
             z-index: 10;
-            transform: translateY(0);
+            transform: translateY(-100%);
             transition: transform 0.5s ease;
 
             li {
                 margin: 1rem 0;
+                opacity: 0;
+                transition: opacity 1s ease;
+
+                 @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: 0.5s + 0.1s * ($i - 1);
+                    }
+                }
 
                 a {
                     font-size: 4rem;
@@ -117,10 +125,18 @@
 
                     &:hover {
                         font-weight: 300;
-                        padding-bottom: 10pxa;
-                        border-bottom: 1 px solid $nav-font-color;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid $nav-font-color;
                     }
                 }
+            }
+        }
+        
+        &.active ul {
+            transform: translateY(0);
+
+            li {
+                opacity: 1;
             }
         }
     }
