@@ -72,6 +72,57 @@ body {
   padding: 0;
 }
 
+/* Navigation ----------------------------- */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  color: rgb(230, 230, 230);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 60px;
+}
+.nav-wrapper .nav-left h1 {
+  font-size: 3rem;
+  color: #b3b3b3;
+  font-weight: 300;
+}
+.nav-wrapper .nav-left h1 span {
+  color: white;
+  font-weight: 600;
+  margin: 0 5px;
+  position: relative;
+  top: 3px;
+}
+.nav-wrapper .nav-right .menu-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  z-index: 10;
+}
+.nav-wrapper .nav-right .menu-icon div {
+  height: 0.25rem;
+  background-color: rgb(230, 230, 230);
+  transition: all 0.3s ease-in-out;
+}
+.nav-wrapper .nav-right .menu-icon.active .bar1 {
+  transform: translateY(0.6rem) rotate(-45deg);
+}
+.nav-wrapper .nav-right .menu-icon.active .bar2 {
+  opacity: 0;
+}
+.nav-wrapper .nav-right .menu-icon.active .bar3 {
+  transform: translateY(-0.75rem) rotate(45deg);
+}
+
 /* Home Section ------------------------------- */
 .video-container {
   position: relative;

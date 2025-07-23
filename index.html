@@ -9,6 +9,34 @@
         <link rel="stylesheet" href="./css/compiled_style.css" />
     </head>
     <body>
+        <!-- Navigation -->
+        <nav class="nav-wrapper">
+            <div class="nav-left">
+                <h1>{<span>T</span>}</h1>
+            </div>
+            <div class="nav-right">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div id="nav">
+                <div class="strip"></div>
+                <div class="strip"></div>
+                <div class="strip"></div>
+                <div class="strip"></div>
+                <div class="strip"></div>
+                <ul>
+                    <li><a href="#home" onclick="hideMenu()">Home</a></li>
+                    <li><a href="#about" onclick="hideMenu()">About</a></li>
+                    <li><a href="#gallery" onclick="hideMenu()">Gallery</a></li>
+                    <li><a href="#blog" onclick="hideMenu()">Blog</a></li>
+                    <li><a href="#contact" onclick="hideMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <main>
             <!-- Home Section -->
             <section id="home">
