@@ -30,6 +30,7 @@
             from {
                 color: darken($primary-font-color, 20%);
             }
+
             to {
                 color: white;
             }
@@ -37,6 +38,10 @@
 
         @include tablet-vertical {
             font-size: 4rem;
+        }
+
+        @include smartphone-vertical {
+            font-size: 3.5rem;
         }
     }
 

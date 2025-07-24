@@ -231,6 +231,16 @@ body {
     font-size: 3rem;
   }
 }
+@media (max-width: 600px) {
+  .nav-wrapper #nav ul li a {
+    font-size: 3rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  .nav-wrapper #nav ul li a {
+    font-size: 2.5rem;
+  }
+}
 .nav-wrapper #nav.active ul {
   transform: translateY(0);
 }
@@ -274,6 +284,11 @@ body {
 @media (orientation: portrait) and (max-width: 1025px) {
   .overlay h1 {
     font-size: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .overlay h1 {
+    font-size: 3.5rem;
   }
 }
 .overlay p {
@@ -380,6 +395,11 @@ body {
     padding-bottom: 10vh;
   }
 }
+@media (orientation: portrait) and (max-width: 700px) {
+  #gallery .gallery-container {
+    padding-bottom: 20vh;
+  }
+}
 #gallery .image-box {
   width: 300px;
   opacity: 0.5;
@@ -444,14 +464,17 @@ body {
 #gallery .text-box h3 {
   color: rgb(200, 200, 200);
 }
-#gallery .image-box, #gallery .text-box {
+#gallery .image-box,
+#gallery .text-box {
   border-radius: 10px;
 }
-#gallery .image-box:not(:last-child), #gallery .text-box:not(:last-child) {
+#gallery .image-box:not(:last-child),
+#gallery .text-box:not(:last-child) {
   margin-bottom: 10px;
 }
 @media (orientation: portrait) and (max-width: 1025px) {
-  #gallery .image-box, #gallery .text-box {
+  #gallery .image-box,
+  #gallery .text-box {
     width: 95%;
     margin-right: unset;
     margin: auto;
@@ -501,9 +524,19 @@ body {
     font-size: 2.2rem;
   }
 }
+@media (max-width: 600px) {
+  #blog .blog-container .featured-article h3 {
+    font-size: 1.5rem;
+  }
+}
 #blog .blog-container .featured-article p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  #blog .blog-container .featured-article p {
+    font-size: 1rem;
+  }
 }
 #blog .blog-container .smaller-articles {
   display: flex;
@@ -543,6 +576,11 @@ body {
     font-size: 1.7rem;
   }
 }
+@media (max-width: 600px) {
+  #blog .blog-container .smaller-articles .article h3 {
+    font-size: 1.3rem;
+  }
+}
 #blog .blog-container .smaller-articles .article p {
   font-size: 1rem;
 }
@@ -565,6 +603,16 @@ body {
 }
 #contact .contact-container {
   opacity: 0;
+}
+@media (max-width: 600px) {
+  #contact .contact-container {
+    padding-top: 5vh;
+  }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  #contact .contact-container {
+    padding-top: 10vh;
+  }
 }
 #contact .contact-container h2 {
   font-size: clamp(2rem, 5vw, 3rem);
@@ -611,6 +659,11 @@ body {
   margin: 20px 20px 0 0;
   height: 200px;
   resize: vertical;
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  #contact .contact-container .form-container form .message textarea {
+    height: 100px;
+  }
 }
 #contact .contact-container .form-container form .message textarea:focus {
   outline: none;

@@ -15,6 +15,10 @@
         @include tablet-vertical {
             @include mobile-gallery-container(10vh);
         }
+
+        @include smartphone-small {
+            padding-bottom: 20vh;
+        }
     }
 
     .image-box {
@@ -37,9 +41,12 @@
         }
 
         @keyframes levitation {
-            0%, 100% {
-               transform: translateY(0);
+
+            0%,
+            100% {
+                transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
@@ -76,7 +83,8 @@
         }
     }
 
-    .image-box, .text-box {
+    .image-box,
+    .text-box {
         border-radius: 10px;
 
         &:not(:last-child) {

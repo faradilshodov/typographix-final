@@ -7,6 +7,14 @@
     .contact-container {
         opacity: 0;
 
+        @include smartphone-vertical {
+            padding-top: 5vh;
+        }
+
+        @include smartphone-small {
+            padding-top: 10vh;
+        }
+
         h2 {
             font-size: clamp(2rem, 5vw, 3rem);
         }
@@ -64,6 +72,10 @@
                         margin: 20px 20px 0 0;
                         height: 200px;
                         resize: vertical;
+
+                        @include smartphone-small {
+                            height: 100px;
+                        }
 
                         &:focus {
                             outline: none;

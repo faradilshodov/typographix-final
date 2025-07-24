@@ -33,11 +33,19 @@
                 @include tablet-vertical {
                     font-size: 2.2rem;
                 }
+
+                @include smartphone-vertical {
+                    font-size: 1.5rem;
+                }
             }
 
             p {
                 font-size: 1.2rem;
                 margin-bottom: 20px;
+
+                @include smartphone-vertical {
+                    font-size: 1rem;
+                }
             }
 
             img {
@@ -75,6 +83,10 @@
 
                     @include tablet-vertical {
                         font-size: 1.7rem;
+                    }
+
+                    @include smartphone-vertical {
+                        font-size: 1.3rem;
                     }
                 }
 
