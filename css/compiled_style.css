@@ -522,6 +522,12 @@ body {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 600px) {
+  #blog .blog-container .smaller-articles .article {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
 #blog .blog-container .smaller-articles .article h3 {
   font-size: 1.8rem;
   color: rgb(200, 200, 200);
@@ -575,6 +581,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+@media (max-width: 600px) {
+  #contact .contact-container .form-container form .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 #contact .contact-container .form-container form .grid-container .form-group {
   display: flex;

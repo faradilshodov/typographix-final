@@ -25,6 +25,11 @@
                     grid-template-columns: repeat(2, 1fr);
                     gap: 20px;
 
+                    @include smartphone-vertical {
+                        grid-template-columns: 1fr;
+                        gap: 10px;
+                    }
+
                     .form-group {
                         display: flex;
                         flex-direction: column;

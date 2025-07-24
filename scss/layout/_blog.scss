@@ -61,6 +61,11 @@
                     margin-bottom: 20px;
                 }
 
+                @include smartphone-vertical {
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+
                 h3 {
                     @include blog-title(1.8rem);
 
