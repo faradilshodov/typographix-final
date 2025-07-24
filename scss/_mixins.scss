@@ -54,6 +54,25 @@
     margin: 15px 0;
 }
 
+// Media Queries
+@mixin tablet-horizontal-large {
+    @media (max-width: 1367px) {
+        @content;
+    }
+}
+
+@mixin tablet-horizontal {
+    @media (orientation: landscape) and (max-width: 1181px) {
+        @content;
+    }
+}
+
+@mixin tablet-vertical {
+    @media (orientation: portrait) and (max-width: 1025px) {
+        @content;
+    }
+}
+
 // Shared Animations
 .fadeInUp {
     animation: fadeInUp 1s ease forwards;

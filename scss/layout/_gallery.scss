@@ -7,6 +7,10 @@
         height: 100vh;
         position: relative;
         top: 50px;
+
+        @include tablet-horizontal-large {
+            margin: 0 2.5%;
+        }
     }
 
     .image-box, .text-box {

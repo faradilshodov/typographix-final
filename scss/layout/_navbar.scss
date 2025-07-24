@@ -10,11 +10,19 @@
     z-index: 10;
     height: 60px;
 
+    @include tablet-horizontal-large {
+        background: $background;
+    }
+
     .nav-left {
         h1 {
             font-size: 3rem;
             color: darken($nav-font-color, 20%);
             font-weight: 300;
+
+            @include tablet-horizontal-large {
+                font-size: 2.5rem;
+            }
 
             span {
                 color: lighten($nav-font-color, 10%);
@@ -22,6 +30,10 @@
                 margin: 0 5px;
                 position: relative;
                 top: 3px;
+
+                @include tablet-horizontal-large {
+                    top: 5px;
+                }
             }
         }
     }
@@ -131,7 +143,7 @@
                 }
             }
         }
-        
+
         &.active ul {
             transform: translateY(0);
 
