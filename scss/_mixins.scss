@@ -54,6 +54,22 @@
     margin: 15px 0;
 }
 
+@mixin mobile-gallery-container ($padding-bottom) {
+    flex-direction: column;
+    height: auto;
+    top: 100px;
+    padding-bottom: $padding-bottom;
+}
+
+@mixin mobile-gallery-box ($width) {
+    width: $width;
+    margin-right: unset;
+    margin: auto;
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: scale(1);
+}
+
 // Media Queries
 @mixin tablet-horizontal-large {
     @media (max-width: 1367px) {

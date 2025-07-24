@@ -11,13 +11,9 @@
         @include tablet-horizontal-large {
             margin: 0 2.5%;
         }
-    }
 
-    .image-box, .text-box {
-        border-radius: 10px;
-
-        &:not(:last-child) {
-            margin-bottom: 10px;
+        @include tablet-vertical {
+            @include mobile-gallery-container(10vh);
         }
     }
 
@@ -34,6 +30,10 @@
         &.tall {
             height: 600px;
             animation: levitation 4s ease-in-out infinite;
+
+            @include tablet-vertical {
+                animation: none;
+            }
         }
 
         @keyframes levitation {
@@ -73,6 +73,18 @@
 
         h3 {
             color: $secondary-font-color;
+        }
+    }
+
+    .image-box, .text-box {
+        border-radius: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        @include tablet-vertical {
+            @include mobile-gallery-box(95%);
         }
     }
 }
