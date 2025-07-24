@@ -90,7 +90,7 @@
 }
 
 @mixin smartphone-horizontal {
-    @media (orientation: landscape) and (max-height: 450) {
+    @media (orientation: landscape) and (max-height: 450px) {
         @content;
     }
 }

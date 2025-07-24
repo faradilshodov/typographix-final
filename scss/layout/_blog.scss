@@ -37,6 +37,10 @@
                 @include smartphone-vertical {
                     font-size: 1.5rem;
                 }
+
+                @include smartphone-horizontal {
+                    font-size: 2rem;
+                }
             }
 
             p {
@@ -61,6 +65,10 @@
                 flex-direction: column;
             }
 
+            @include smartphone-horizontal {
+                flex-direction: column;
+            }
+
             .article {
                 @extend %article;
                 opacity: 0;
@@ -71,6 +79,10 @@
 
                 @include smartphone-vertical {
                     margin: 0;
+                    margin-bottom: 20px;
+                }
+
+                @include smartphone-horizontal {
                     margin-bottom: 20px;
                 }
 

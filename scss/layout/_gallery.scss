@@ -19,6 +19,10 @@
         @include smartphone-small {
             padding-bottom: 20vh;
         }
+
+        @include smartphone-horizontal {
+            @include mobile-gallery-container(30vh);
+        }
     }
 
     .image-box {
@@ -36,6 +40,10 @@
             animation: levitation 4s ease-in-out infinite;
 
             @include tablet-vertical {
+                animation: none;
+            }
+
+            @include smartphone-horizontal {
                 animation: none;
             }
         }
@@ -92,6 +100,10 @@
         }
 
         @include tablet-vertical {
+            @include mobile-gallery-box(95%);
+        }
+
+        @include smartphone-horizontal {
             @include mobile-gallery-box(95%);
         }
     }

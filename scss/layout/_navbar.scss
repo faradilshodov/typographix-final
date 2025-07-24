@@ -118,6 +118,10 @@
             transform: translateY(-100%);
             transition: transform 0.5s ease;
 
+            @include smartphone-horizontal {
+                top: 5%;
+            }
+
             li {
                 margin: 1rem 0;
                 opacity: 0;
@@ -151,6 +155,10 @@
 
                     @include smartphone-small {
                         font-size: 2.5rem;
+                    }
+
+                    @include smartphone-horizontal {
+                        font-size: 1.5rem;
                     }
                 }
             }
