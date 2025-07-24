@@ -140,6 +140,10 @@
                         padding-bottom: 10px;
                         border-bottom: 1px solid $nav-font-color;
                     }
+
+                    @include tablet-horizontal {
+                        font-size: 3rem;
+                    }
                 }
             }
         }
